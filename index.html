@@ -29,26 +29,13 @@ select{
 
 <body>
 <center>
-  <div class="alert alert-danger" role="alert" id="lalert" hidden>
-    Alert!!!
+  <div class="alert alert-primary" role="alert">
+    <h3 id="time"><h>
   </div>
-</br>
-</br>
-
-<h1>E-Board</h1>
 
 </div>
 <div class="collapse" id="collapseExample">
 </div>
-</br>
-
-<button class="btn btn-primary" type="button" id="btloading" disabled hidden>
-  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  กำลังรีเฟรชข้อมูล...
-</button>
-
-<button type="button" class="btn btn-success" id="btsearch" onclick="showData()">💻 Manual  refresh</button>  
-</br>
 </div>
 <table class="table table-bordered" id="mytb" hidden>
   <thead>
@@ -71,6 +58,10 @@ select{
   </tbody>
   </table>
 
+  <button class="btn btn-primary" type="button" id="btloading" disabled hidden>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    กำลังรีเฟรชข้อมูล...
+  </button>
 
 
 </center>
@@ -78,8 +69,32 @@ select{
 <script>
 
 
+
+var timeDisplay = document.getElementById("time");
+
+
+function refreshTime() {
+  var dateString = new Date().toLocaleDateString('th-TH', {
+  timeZone: "Asia/Bangkok",
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  weekday: 'long',
+})
+
+  
+
+  var formattedString = dateString.replace(", ", " - ");
+  timeDisplay.innerHTML = formattedString;
+}
+
+setInterval(refreshTime, 1000);
+setInterval(showData, 10000);
+
 function showData() {
-  document.getElementById("btsearch").hidden=true;
   document.getElementById("btloading").hidden=false;
   
       try{
@@ -98,8 +113,21 @@ function showData() {
           document.getElementById("mytb").hidden=false;
             var obj = JSON.parse(this.responseText);
         document.getElementById("ttbody").innerHTML = "";
-        document.getElementById("fid").innerHTML = "ตารางนัด "+x;
-        document.getElementById("nid").innerHTML = obj[0].col1;
+        document.getElementById("fid").innerHTML = "ตารางนัดหมาย ";
+
+
+        const result = d.toLocaleDateString('th-TH', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
+})
+
+
+        document.getElementById("nid").innerHTML = result;
+
+
+
 
 
 
@@ -132,7 +160,6 @@ newRow.append(newCell6);
 document.getElementById("ttbody").appendChild(newRow);
 }
 document.getElementById("btloading").hidden=true;
-document.getElementById("btsearch").hidden=false;
 }
             }
       } catch {}
