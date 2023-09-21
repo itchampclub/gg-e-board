@@ -31,16 +31,17 @@ select{
 
 <body onload="showData()">
 
-  <div class="alert alert-primary text-center" role="alert">
-    <h3 id="time"><h>
-  </div>
+
 <table class="table table-bordered text-center" id="mytb" hidden>
  <thead class="thead-light">
-
+  <thead class="thead-light">
       <td colspan="6">
+        <div class="alert alert-primary text-center" role="alert">
+          <h3 id="time"><h>
+        </div>
         <h3 class="" id="fid"></h5>
       </td>
-    
+    </thead>
   <tr>					  			
   <th scope="col">เลขที่</th>
   <th scope="col">จาก</th>
@@ -84,7 +85,7 @@ function refreshTime() {
 }
 
 setInterval(refreshTime, 1000);
-setInterval(showData, 30000);
+setInterval(showData, 300000);
 
 function showData() {
   document.getElementById("btloading").hidden=false;
