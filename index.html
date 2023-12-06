@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,8 +12,35 @@
 
 
 <style>
-h1, h3, h5, th, tr, td, p, .btn, .progress-bar, .d-flex, .form-group, .modal{
+h1, h2, h3, h4, h5, th, tr, td, p, .btn, .progress-bar, .d-flex, .form-group, .modal{
   font-family: 'Sarabun', sans-serif;
+  color:white;
+}
+
+h4, h5, th, tr, td, p{
+  font-family: 'Sarabun', sans-serif;
+  color:black;
+}
+
+th {
+       background-color: #EEEEEE;
+       font-weight: bold;
+       font-size: x-large;
+    }
+
+   tr:nth-child(odd) {
+    background-color: #FFD9B7;
+    }
+
+   tr:nth-child(even) {
+    background-color: #B0D9B1;
+    }
+
+  table.table-bordered > thead > tr > th{
+  border:1px solid black;
+}
+table.table-bordered > tbody > tr > td{
+  border:1px solid black;
 }
 select{
         color:red;
@@ -31,17 +59,16 @@ select{
 
 <body onload="showData()">
 
-  
-<table class="table table-striped text-center" id="mytb" hidden>
- <thead class="thead-light">
-  <thead class="thead-light">
-      <td colspan="6">
-        <div class="alert alert-primary text-center" role="alert">
-          <h3 id="time"><h>
-        </div>
-        <h3 class="" id="fid"></h5>
-      </td>
-    </thead>
+<nav class="navbar justify-content-center" style="background-color: #00008B;">
+<div class="text-center navbar-text">
+<h1 id="time"></h1>
+</br>
+<h3 class="text-center navbar-text" id="fid"></h3>
+</div>
+</nav>
+<table class="table table-bordered text-center" id="mytb" hidden>
+
+ <thead>
   <tr>					  			
   <th scope="col">เลขที่คดี</th>
   <th scope="col">โจทก์</th>
@@ -115,7 +142,11 @@ function showData() {
                         return a.col3 - b.col3
                        })
       totalobj = Object.keys(obj).length
-      document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+totalobj+" รายการ";
+      if(obj[0].col1 === "-"){
+        document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+0+" รายการ";
+      }else{
+        document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+totalobj+" รายการ";
+      }
       round = totalobj/10
 
       if(cround > round){
@@ -154,6 +185,8 @@ var newCell3 = document.createElement("td");
 var newCell4 = document.createElement("td");
 var newCell5 = document.createElement("td");
 var newCell6 = document.createElement("td");
+newCell4.classList.add("h5");
+newCell5.classList.add("h5");
 newCell1.innerHTML = obj[i].col2
 newCell2.innerHTML = obj[i].col4
 newCell3.innerHTML = obj[i].col5
