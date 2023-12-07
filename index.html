@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -72,10 +73,10 @@ select{
 <h1 style="color:#002060" class="text-center" id="fid"></h1>
 </div>
 </nav>
-<table class="table text-center" id="mytb" hidden>
+<table class="table" id="mytb" hidden>
 
  <thead>
-  <tr>					  			
+  <tr class="text-center">					  			
   <th scope="col">เลขที่คดี</th>
   <th scope="col">โจทก์</th>
   <th scope="col">จำเลย</th>
@@ -88,8 +89,8 @@ select{
   </tbody>
   </table>
 
-  <div class="w-100 d-flex justify-content-center align-items-center" style="height: 100px;">
-  <div class="spinner-border text-primary" role="status"  id="btloading" disabled hidden>>
+  <div class="text-center" style="height: 200px;" id="btloading" disabled hidden>
+  <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status"  >
     <span class="sr-only">Loading...</span>
   </div>
   </div>
@@ -191,12 +192,12 @@ var newCell3 = document.createElement("td");
 var newCell4 = document.createElement("td");
 var newCell5 = document.createElement("td");
 var newCell6 = document.createElement("td");
-newCell1.classList.add("h5");
-newCell2.classList.add("h5");
-newCell3.classList.add("h5");
-newCell4.classList.add("h5");
-newCell5.classList.add("h5");
-newCell6.classList.add("h5");
+newCell1.classList.add("h5","text-center");
+newCell2.classList.add("h5","text-start");
+newCell3.classList.add("h5","text-start");
+newCell4.classList.add("h5","text-center");
+newCell5.classList.add("h5","text-center");
+newCell6.classList.add("h5","text-center");
 newCell1.innerHTML = obj[i].col2
 newCell2.innerHTML = obj[i].col4
 newCell3.innerHTML = obj[i].col5
