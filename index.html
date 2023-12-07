@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,200;0,400;1,200;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@800&display=swap" rel="stylesheet">
 
 
 <style>
@@ -17,31 +18,28 @@ h1, h2, h3, h4, h5, th, tr, td, p, .btn, .progress-bar, .d-flex, .form-group, .m
   color:white;
 }
 
-h4, h5, th, tr, td, p{
+h4, p{
   font-family: 'Sarabun', sans-serif;
   color:black;
 }
-
+h5{
+  font-family: 'Sarabun', sans-serif;
+  color:white;
+}
 th {
-       background-color: #EEEEEE;
+       background-color: black;
        font-weight: bold;
        font-size: x-large;
+       color: #fffe00;
     }
 
    tr:nth-child(odd) {
-    background-color: #FFD9B7;
+    background-color: #002060;
     }
 
    tr:nth-child(even) {
-    background-color: #B0D9B1;
+    background-color: #0070c0;
     }
-
-  table.table-bordered > thead > tr > th{
-  border:1px solid black;
-}
-table.table-bordered > tbody > tr > td{
-  border:1px solid black;
-}
 select{
         color:red;
     }
@@ -59,15 +57,22 @@ select{
 
 <body onload="showData()">
 
-<nav class="navbar justify-content-center" style="background-color: #00008B;">
-<div class="text-center navbar-text">
-  </br>
-<h1 id="time"></h1>
-</br>
-<h3 class="text-center navbar-text" id="fid"></h3>
+<nav class="navbar justify-content-center" style="background-color: #002060;">
+<div class="text-center">
+  <h1 style="color:#ffff00">บัญชีนัดความ ศาลจังหวัดกำแพงเพชร</h1>
 </div>
 </nav>
-<table class="table table-bordered text-center" id="mytb" hidden>
+<nav class="navbar justify-content-center" style="background-color: #0070c0;">
+<div class="text-center navbar-text">
+<h1 id="time"></h1>
+</div>
+</nav>
+<nav class="navbar justify-content-center" style="background-color: #ffffff;">
+<div class="text-center">
+<h1 style="color:#002060" class="text-center" id="fid"></h1>
+</div>
+</nav>
+<table class="table text-center" id="mytb" hidden>
 
  <thead>
   <tr>					  			
