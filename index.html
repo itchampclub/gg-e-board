@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -59,18 +56,18 @@ th {
 </div>
 </nav>
 <nav class="navbar justify-content-center" style="background-color: #0070c0;">
-<div class="text-center navbar-text">
-<h1 class="display-5" id="time"></h1>
-</div>
-</nav>
-<nav class="navbar justify-content-center" style="background-color: #ffffff;">
 <div class="text-center">
-<h1 style="color:#002060" class="text-center display-5" id="fid"></h1>
+<h1 class="Display-5" id="time">วันอาทิตย์ที่ 17 ธันวาคม 2566 เวลา 21:54:55 น.</h1>
 </div>
 </nav>
-<table class="table" id="mytb" hidden>
+<nav class="" style="background-color: #ffffff;">
+<div class="text-center">
+<h1 style="color:#002060" class="text-center display-5" id="fid">ตารางนัดหมาย 17 รายการ</h1>
+</div>
+</nav>
+<table class="table" id="mytb">
 
- <thead >
+ <thead>
 <tr class="text-center" style="background-color: #000000;">					  			
   <th class="display-6" scope="col" style="width:  14%">เลขที่คดี</th>
   <th class="display-6" scope="col" style="width:  25%">โจทก์</th>
@@ -80,12 +77,11 @@ th {
   <th class="display-6" scope="col" style="width:  20%">สาเหตุที่นัด</th>
   </tr>
   </thead>
-  <tbody id="ttbody">
-  </tbody>
+  <tbody id="ttbody"><tr><td class="h2 text-center">ผบE6169/2566</td><td class="h2 text-start">ธนาคารกรุงเทพ จำกัด (มหาชน)</td><td class="h2 text-start">นางสาวธนิกาหรือนัฐธิตรา มุกจันทร์หรือมุขจันทร์หรือทองอ่ำ ที่ 1 กับพวกรวม 8 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6170/2566</td><td class="h2 text-start">สหกรณ์ผู้ใช้น้ำสถานีสูบน้ำด้วยไฟฟ้าบ้านท่าช้าง จำกัด โดย นายสัมผัด โชติช่วง ผู้รับมอบอำนาจ</td><td class="h2 text-start">นายธวัช กระมล</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6171/2566</td><td class="h2 text-start">สหกรณ์ผู้ใช้น้ำสถานีสูบน้ำด้วยไฟฟ้าบ้านท่าช้าง จำกัด โดย นายสัมผัด โชติช่วง ผู้รับมอบอำนาจ</td><td class="h2 text-start">นายธวัช กระมล ที่ 1 กับพวกรวม 3 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6199/2566</td><td class="h2 text-start">บริษัท แม็คซ์กรุ๊ป คอร์ปอเรชั่น จำกัด</td><td class="h2 text-start">นางสาวกฤตนพร ปานดำ</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">สืบพยานโจทก์/ทำยอม</td></tr><tr><td class="h2 text-center">ผบE6258/2566</td><td class="h2 text-start">บริษัท ไมด้า ลิสซิ่ง จำกัด(มหาชน)</td><td class="h2 text-start">นายทศพร บุตรโคตร ที่ 1 กับพวกรวม 2 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">12</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6273/2566</td><td class="h2 text-start">บริษัท สยามคูโบต้า ลีสซิ่ง จำกัด</td><td class="h2 text-start">นายกิตติ เสือสูงเนิน ที่ 1 กับพวกรวม 3 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">7</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6274/2566</td><td class="h2 text-start">บริษัท สยามคูโบต้า ลีสซิ่ง จำกัด</td><td class="h2 text-start">นางอุมาพร วังคีรี ที่ 1 กับพวกรวม 2 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">7</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr></tbody>
   </table>
 
-  <div class="text-center" id="btloading" disabled hidden>
-  <div class="spinner-grow text-light" style="width: 3rem; height: 3rem;" role="status"  >
+  <div class="text-center" id="btloading" disabled="" hidden="">
+  <div class="spinner-grow text-light" style="width: 3rem; height: 3rem;" role="status">
   </div>
   </div>
 
@@ -231,5 +227,7 @@ document.getElementById("btloading").hidden=true;
 </script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
