@@ -55,7 +55,6 @@ th {
 
 <nav class="navbar justify-content-center" style="background-color: #002060;">
 <div class="text-center">
-<br>
   <h1 class="display-3" style="color:#ffff00">บัญชีนัดความ ศาลจังหวัดกำแพงเพชร</h1>
 </div>
 </nav>
@@ -76,8 +75,8 @@ th {
   <th class="display-6" scope="col">เลขที่คดี</th>
   <th class="display-6" scope="col">โจทก์</th>
   <th class="display-6" scope="col">จำเลย</th>
-  <th class="display-6" scope="col">เวลานัด</th>
-  <th class="display-6" scope="col">ห้องที่</th>
+  <th class="display-6 col-md-auto" scope="col">เวลานัด</th>
+  <th class="display-6 col-md-auto" scope="col">ห้องที่</th>
   <th class="display-6" scope="col">สาเหตุที่นัด</th>
   </tr>
   </thead>
@@ -208,8 +207,8 @@ newCell6.classList.add("h2","text-center");
 newCell1.innerHTML = obj[i].col2
 newCell2.innerHTML = obj[i].col4
 newCell3.innerHTML = obj[i].col5
-newCell4.innerHTML = "&emsp;&ensp;"+obj[i].col3+"&ensp;&emsp;"
-newCell5.innerHTML = "&ensp;&emsp;"+obj[i].col8+"&emsp;&ensp;"
+newCell4.innerHTML = obj[i].col3
+newCell5.innerHTML = obj[i].col8
 newCell6.innerHTML = obj[i].col7
 newRow.append(newCell1);
 newRow.append(newCell2);
