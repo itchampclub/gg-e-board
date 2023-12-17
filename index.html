@@ -1,9 +1,12 @@
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +29,7 @@ h5{
 }
 
 th {
-       background-color: black;
+       background-color: #000000;
        font-weight: bold;
        font-size: x-large;
        color: #fffe00;
@@ -38,12 +41,6 @@ th {
 
    tr:nth-child(even) {
     background-color: #0070c0;
-    }
-select{
-        color:red;
-    }
-    option:not(first-child) {
-        color:red;
     }
     </style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integ>
@@ -59,29 +56,29 @@ select{
 <nav class="navbar justify-content-center" style="background-color: #002060;">
 <div class="text-center">
 <br>
-  <h1 class="display-2" style="color:#ffff00">บัญชีนัดความ ศาลจังหวัดกำแพงเพชร</h1>
+  <h1 class="display-3" style="color:#ffff00">บัญชีนัดความ ศาลจังหวัดกำแพงเพชร</h1>
 </div>
 </nav>
 <nav class="navbar justify-content-center" style="background-color: #0070c0;">
 <div class="text-center navbar-text">
-<h1 class="display-4" id="time"></h1>
+<h1 class="display-5" id="time"></h1>
 </div>
 </nav>
 <nav class="navbar justify-content-center" style="background-color: #ffffff;">
 <div class="text-center">
-<h1 style="color:#002060" class="text-center display-4" id="fid"></h1>
+<h1 style="color:#002060" class="text-center display-5" id="fid"></h1>
 </div>
 </nav>
 <table class="table" id="mytb" hidden>
 
- <thead>
-  <tr class="text-center">					  			
-  <th class="display-4" scope="col">เลขที่คดี</th>
-  <th class="display-4" scope="col">โจทก์</th>
-  <th class="display-4" scope="col">จำเลย</th>
-  <th class="display-4" scope="col">เวลานัด</th>
-  <th class="display-4" scope="col">ห้องที่</th>
-  <th class="display-4" scope="col">สาเหตุที่นัด</th>
+ <thead >
+  <tr class="text-center" style="background-color: #000000;">					  			
+  <th class="display-6" scope="col">เลขที่คดี</th>
+  <th class="display-6" scope="col">โจทก์</th>
+  <th class="display-6" scope="col">จำเลย</th>
+  <th class="display-6" scope="col">เวลานัด</th>
+  <th class="display-6" scope="col">ห้องที่</th>
+  <th class="display-6" scope="col">สาเหตุที่นัด</th>
   </tr>
   </thead>
   <tbody id="ttbody">
@@ -211,8 +208,8 @@ newCell6.classList.add("h2","text-center");
 newCell1.innerHTML = obj[i].col2
 newCell2.innerHTML = obj[i].col4
 newCell3.innerHTML = obj[i].col5
-newCell4.innerHTML = obj[i].col3
-newCell5.innerHTML = obj[i].col8
+newCell4.innerHTML = "&emsp;&ensp;"+obj[i].col3+"&ensp;&emsp;"
+newCell5.innerHTML = "&ensp;&emsp;"+obj[i].col8+"&emsp;&ensp;"
 newCell6.innerHTML = obj[i].col7
 newRow.append(newCell1);
 newRow.append(newCell2);
