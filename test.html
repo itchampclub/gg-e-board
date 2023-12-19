@@ -26,6 +26,16 @@ h5{
   color:white;
 }
 
+.attention {
+  animation: 3s attention;
+}
+
+@keyframes attention {
+  0% {
+    background-color: #bcf516;
+  }
+}
+
 th {
        background-color: #000000;
        font-weight: bold;
@@ -222,12 +232,12 @@ var newCell3 = document.createElement("td");
 var newCell4 = document.createElement("td");
 var newCell5 = document.createElement("td");
 var newCell6 = document.createElement("td");
-newCell1.classList.add("h2","text-center");
-newCell2.classList.add("h2","text-start");
-newCell3.classList.add("h2","text-start");
-newCell4.classList.add("h2","text-center");
-newCell5.classList.add("h2","text-center");
-newCell6.classList.add("h2","text-center");
+newCell1.classList.add("attention","h2","text-center");
+newCell2.classList.add("attention","h2","text-start");
+newCell3.classList.add("attention","h2","text-start");
+newCell4.classList.add("attention","h2","text-center");
+newCell5.classList.add("attention","h2","text-center");
+newCell6.classList.add("attention","h2","text-center");
 newCell1.innerHTML = obj[i].col2
 newCell2.innerHTML = obj[i].col4
 newCell3.innerHTML = obj[i].col5
