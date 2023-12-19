@@ -143,13 +143,11 @@ else if(x_ttd.split('/')[1] == '11'){ var mm_ttd = 'พ.ย.'}
 else if(x_ttd.split('/')[1] == '12'){ var mm_ttd = 'ธ.ค.'}
 
 var ttd = ((x_ttd.split('/')[0])-0)+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
+
         var cc_check = localStorage.getItem('all_data')
-        if(cc_check.length > 0) {
+        if(cc_check !== null) {
           var obj = JSON.parse(cc_check);
-          if(obj[0].col1 = ttd){
-            alert(obj[0].col1)
-          }else{
-            alert(ttd)
+          if(obj[0].col1 !== ttd && obj[0].col1 === "-"){
             localStorage.clear()
           }
           document.getElementById("mytb").hidden=false;
@@ -255,7 +253,7 @@ document.getElementById("btloading").hidden=true;
             xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
-                    localStorage.setItem('all_data', JSON.stringify(obj));
+          localStorage.setItem('all_data', JSON.stringify(obj));
 }
             }
             }
