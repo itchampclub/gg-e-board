@@ -1,0 +1,274 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@800&display=swap" rel="stylesheet">
+
+
+<style>
+h1, h2, h3, h4, h5, th, tr, td, p, .btn, .progress-bar, .d-flex, .form-group, .modal{
+  font-family: 'Sarabun', sans-serif;
+  color:white;
+}
+
+h4, p{
+  font-family: 'Sarabun', sans-serif;
+  color:black;
+}
+h5{
+  font-family: 'Sarabun', sans-serif;
+  color:white;
+}
+
+th {
+       background-color: #000000;
+       font-weight: bold;
+       font-size: x-large;
+       color: #fffe00;
+    }
+
+   tr:nth-child(odd) {
+    background-color: #002060;
+    }
+
+   tr:nth-child(even) {
+    background-color: #0070c0;
+    }
+    </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integ>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" integ>
+<title>E-Board</title>
+</head>
+
+
+
+
+<body style="background-color: #000000;" onload="showData()">
+
+<nav class="navbar justify-content-center" style="background-color: #002060;">
+<div class="text-center">
+  <h1 class="display-3" style="color:#ffff00">บัญชีนัดความ ศาลจังหวัดกำแพงเพชร</h1>
+</div>
+</nav>
+<nav class="navbar justify-content-center" style="background-color: #0070c0;">
+<div class="text-center">
+<h1 class="display-4" id="time"></h1>
+</div>
+</nav>
+<nav class="" style="background-color: #ffffff;">
+<div class="text-center">
+<h1 style="color:#002060" class="text-center display-5" id="fid"></h1>
+</div>
+</nav>
+<table class="table" id="mytb">
+
+ <thead>
+<tr class="text-center" style="background-color: #000000;">					  			
+  <th class="display-6" scope="col" style="width:  14%">เลขที่คดี</th>
+  <th class="display-6" scope="col" style="width:  25%">โจทก์</th>
+  <th class="display-6" scope="col" style="width:  25%">จำเลย</th>
+  <th class="display-6" scope="col" style="width:  8.5%">เวลานัด</th>
+  <th class="display-6" scope="col" style="width:  7.5%">ห้องที่</th>
+  <th class="display-6" scope="col" style="width:  20%">สาเหตุที่นัด</th>
+  </tr>
+  </thead>
+  <tbody id="ttbody"><tr><td class="h2 text-center">ผบE6169/2566</td><td class="h2 text-start">ธนาคารกรุงเทพ จำกัด (มหาชน)</td><td class="h2 text-start">นางสาวธนิกาหรือนัฐธิตรา มุกจันทร์หรือมุขจันทร์หรือทองอ่ำ ที่ 1 กับพวกรวม 8 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6170/2566</td><td class="h2 text-start">สหกรณ์ผู้ใช้น้ำสถานีสูบน้ำด้วยไฟฟ้าบ้านท่าช้าง จำกัด โดย นายสัมผัด โชติช่วง ผู้รับมอบอำนาจ</td><td class="h2 text-start">นายธวัช กระมล</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6171/2566</td><td class="h2 text-start">สหกรณ์ผู้ใช้น้ำสถานีสูบน้ำด้วยไฟฟ้าบ้านท่าช้าง จำกัด โดย นายสัมผัด โชติช่วง ผู้รับมอบอำนาจ</td><td class="h2 text-start">นายธวัช กระมล ที่ 1 กับพวกรวม 3 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6199/2566</td><td class="h2 text-start">บริษัท แม็คซ์กรุ๊ป คอร์ปอเรชั่น จำกัด</td><td class="h2 text-start">นางสาวกฤตนพร ปานดำ</td><td class="h2 text-center">22.00</td><td class="h2 text-center">6</td><td class="h2 text-center">สืบพยานโจทก์/ทำยอม</td></tr><tr><td class="h2 text-center">ผบE6258/2566</td><td class="h2 text-start">บริษัท ไมด้า ลิสซิ่ง จำกัด(มหาชน)</td><td class="h2 text-start">นายทศพร บุตรโคตร ที่ 1 กับพวกรวม 2 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">12</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6273/2566</td><td class="h2 text-start">บริษัท สยามคูโบต้า ลีสซิ่ง จำกัด</td><td class="h2 text-start">นายกิตติ เสือสูงเนิน ที่ 1 กับพวกรวม 3 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">7</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr><tr><td class="h2 text-center">ผบE6274/2566</td><td class="h2 text-start">บริษัท สยามคูโบต้า ลีสซิ่ง จำกัด</td><td class="h2 text-start">นางอุมาพร วังคีรี ที่ 1 กับพวกรวม 2 คน</td><td class="h2 text-center">22.00</td><td class="h2 text-center">7</td><td class="h2 text-center">นัดไกล่เกลี่ย/ให้การ/สืบพยาน</td></tr></tbody>
+  </table>
+
+  <div class="text-center" id="btloading" disabled="" hidden="">
+  <div class="spinner-grow text-light" style="width: 3rem; height: 3rem;" role="status">
+  </div>
+  </div>
+
+<script>
+var timeDisplay = document.getElementById("time");
+
+
+function refreshTime() {
+  var dateString = new Date().toLocaleDateString('th-TH', {
+  timeZone: "Asia/Bangkok",
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  weekday: 'long',
+})
+
+  var formattedString = dateString.replace(", ", " - ");
+  timeDisplay.innerHTML = formattedString+" น.";
+}
+
+setInterval(refreshTime, 1000);
+setInterval(showData, 30000);
+
+var totalobj = 0
+var round = 0
+var r1i = 0
+var r2i = 0
+var cround = 0
+ console.log(cround)
+
+function showData() {
+
+
+
+  document.getElementById("btloading").hidden=false;
+  document.getElementById("ttbody").innerHTML = "";
+      try{
+        const d = new Date();
+        var tfd = (d.getDate() <=9) ? "0"+(d.getDate()) :d.getDate();
+        var tfm = (d.getMonth() + 1 <=9) ? "0"+(d.getMonth() + 1) :d.getMonth() + 1;
+        const x = tfd + "/" + tfm + "/" + (d.getFullYear()+543);
+        var x_ttd = x
+     // alert(x)
+     if(x_ttd.split('/')[1] == '01'){ var mm_ttd = 'ม.ค.'}
+else if(x_ttd.split('/')[1] == '02'){ var mm_ttd = 'ก.พ.'}
+else if(x_ttd.split('/')[1] == '03'){ var mm_ttd = 'มี.ค.'}
+else if(x_ttd.split('/')[1] == '04'){ var mm_ttd = 'เม.ย.'}
+else if(x_ttd.split('/')[1] == '05'){ var mm_ttd = 'พ.ค.'}
+else if(x_ttd.split('/')[1] == '06'){ var mm_ttd = 'มิ.ย.'}
+else if(x_ttd.split('/')[1] == '07'){ var mm_ttd = 'ก.ค.'}
+else if(x_ttd.split('/')[1] == '08'){ var mm_ttd = 'ส.ค.'}
+else if(x_ttd.split('/')[1] == '09'){ var mm_ttd = 'ก.ย.'}
+else if(x_ttd.split('/')[1] == '10'){ var mm_ttd = 'ต.ค.'}
+else if(x_ttd.split('/')[1] == '11'){ var mm_ttd = 'พ.ย.'}
+else if(x_ttd.split('/')[1] == '12'){ var mm_ttd = 'ธ.ค.'}
+
+var ttd = ((x_ttd.split('/')[0])-0)+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
+        var cc_check = localStorage.getItem('all_data')
+        if(cc_check.length > 0) {
+          var obj = JSON.parse(cc_check);
+          if(obj[0].col1 = ttd){
+            alert(obj[0].col1)
+          }else{
+            alert(ttd)
+            localStorage.clear()
+          }
+          document.getElementById("mytb").hidden=false;
+                obj.sort(function(a,b){
+                        return a.col3 - b.col3
+                       })
+      totalobj = Object.keys(obj).length
+      if(obj[0].col1 === "-"){
+        document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+0+" รายการ";
+      }else{
+        document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+totalobj+" รายการ";
+      }
+      round = totalobj/7
+
+      if(cround > round){
+        cround = 0
+      }
+      if(round >= 0 && cround < 1){ 
+         r1i=0;r2i=7; cround = cround+1
+      }else if(round >= 1 && cround < 2){
+        r1i=7;r2i=14;  cround = cround +1
+      }else if(round >= 2 && cround < 3){
+        r1i=14;r2i=21;  cround = cround +1
+      }else if(round >= 3 && cround < 4){
+        r1i=21;r2i=28;  cround = cround +1
+      }else if(round >= 4 && cround < 5){
+        r1i=28;r2i=35;  cround = cround +1
+      }else if(round >= 5 && cround < 6){
+        r1i=35;r2i=42;  cround = cround +1
+      }else if(round >= 6 && cround < 7){
+        r1i=42;r2i=49;  cround = cround +1
+      }else if(round >= 7 && cround < 8){
+        r1i=49;r2i=56;  cround = cround +1
+      }else if(round >= 8 && cround < 9){
+        r1i=56;r2i=63;  cround = cround +1
+      }else if(round >= 9 && cround < 10){
+        r1i=63;r2i=70;  cround = cround +1
+      }else if(round >= 10 && cround < 11){
+        r1i=70;r2i=77;  cround = cround +1
+      }else if(round >= 11 && cround < 12){
+        r1i=77;r2i=84;  cround = cround +1
+      }else if(round >= 12 && cround < 13){
+        r1i=84;r2i=91;  cround = cround +1
+      }else if(round >= 13 && cround < 14){
+        r1i=91;r2i=98;  cround = cround +1
+      }else if(round >= 14 && cround < 15){
+        r1i=98;r2i=105;  cround = cround +1
+      }else if(round >= 15 && cround < 16){
+        r1i=105;r2i=112;  cround = cround +1
+      }else if(round >= 16 && cround < 17){
+        r1i=112;r2i=119;  cround = cround +1
+      }else if(round >= 17 && cround < 18){
+        r1i=119;r2i=126;  cround = cround +1
+      }else if(round >= 18 && cround < 19){
+        r1i=126;r2i=133;  cround = cround +1
+      }else if(round >= 19 && cround < 20){
+        r1i=133;r2i=140;  cround = cround +1
+      }else if(round >= 20 && cround < 21){
+        r1i=140;r2i=147;  cround = cround +1
+      }
+     // console.log(cround+" > "+round)
+
+
+for (var i=0; i < obj.length; i++) {
+
+if(i>=r1i && i<r2i){
+
+var newRow = document.createElement("tr");
+var newCell1 = document.createElement("td");
+var newCell2 = document.createElement("td");
+var newCell3 = document.createElement("td");
+var newCell4 = document.createElement("td");
+var newCell5 = document.createElement("td");
+var newCell6 = document.createElement("td");
+newCell1.classList.add("h2","text-center");
+newCell2.classList.add("h2","text-start");
+newCell3.classList.add("h2","text-start");
+newCell4.classList.add("h2","text-center");
+newCell5.classList.add("h2","text-center");
+newCell6.classList.add("h2","text-center");
+newCell1.innerHTML = obj[i].col2
+newCell2.innerHTML = obj[i].col4
+newCell3.innerHTML = obj[i].col5
+newCell4.innerHTML = obj[i].col3
+newCell5.innerHTML = obj[i].col8
+newCell6.innerHTML = obj[i].col7
+newRow.append(newCell1);
+newRow.append(newCell2);
+newRow.append(newCell3);
+newRow.append(newCell4);
+newRow.append(newCell5);
+newRow.append(newCell6);
+document.getElementById("ttbody").appendChild(newRow);
+}
+}
+document.getElementById("btloading").hidden=true;
+          }else{
+            var xmlhttp = new XMLHttpRequest();
+        var url = "https://script.google.com/macros/s/AKfycbxVfeojxDOiFAkaeZOg6D4k_UuHI-_G3KD8bxhx-HdkI9gaf-fPjEHatYc1c8p3225xKw/exec";
+        var theUrl = url+"?today="+x;
+        xmlhttp.open('GET', theUrl);
+        xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+                    localStorage.setItem('all_data', JSON.stringify(obj));
+}
+            }
+            }
+      } catch {}
+  }
+
+
+      
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
