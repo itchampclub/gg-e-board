@@ -147,7 +147,7 @@ var ttd = ((x_ttd.split('/')[0])-0)+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
         var cc_check = localStorage.getItem('all_data')
         if(cc_check !== null) {
           var obj = JSON.parse(cc_check);
-          if(obj[0].col1 !== ttd && obj[0].col1 === "-"){
+          if(obj[0].col1 !== ttd || obj[0].col1 === "-"){
             localStorage.clear()
           }
           document.getElementById("mytb").hidden=false;
