@@ -169,7 +169,7 @@ var ttd = ((x_ttd.split('/')[0])-0)+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
        totalobj = Object.keys(obj).length
        document.getElementById("mytb").hidden=false;
        if(totalobj === 0){
-  //
+        document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+0+" รายการ";
 }else{
                 obj.sort(function(a,b){
                         return a.col3 - b.col3
