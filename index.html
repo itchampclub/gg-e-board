@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -160,18 +159,27 @@ var ttd = ((x_ttd.split('/')[0])-0)+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
           if(obj[0].col1 !== ttd || obj[0].col1 === "-" || obj[0].col4 === ""){
             localStorage.clear()
           }
-          document.getElementById("mytb").hidden=false;
+
+  var utc7dt = new Date(new Date().toLocaleString('en', {timeZone: 'Asia/Bangkok'}))
+  var chh = (utc7dt.getHours() <=9) ? "0"+(utc7dt.getHours()) :utc7dt.getHours();
+  var cmm = (utc7dt.getMinutes() <=9) ? "0"+(utc7dt.getMinutes()) :utc7dt.getMinutes();
+  var tnow = chh+"."+cmm
+
+       obj = obj.filter(obj=> obj.col3 > tnow) 
+       totalobj = Object.keys(obj).length
+       document.getElementById("mytb").hidden=false;
+       if(totalobj === 0){
+        document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+0+" รายการ";
+}else{
                 obj.sort(function(a,b){
                         return a.col3 - b.col3
                        })
-      totalobj = Object.keys(obj).length
       if(obj[0].col1 === "-"){
         document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+0+" รายการ";
       }else{
         document.getElementById("fid").innerHTML = "ตารางนัดหมาย "+totalobj+" รายการ";
       }
       round = totalobj/7
-
       if(cround > round){
         cround = 0
       }
@@ -220,9 +228,7 @@ var ttd = ((x_ttd.split('/')[0])-0)+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
       }
      // console.log(cround+" > "+round)
 
-
-for (var i=0; i < obj.length; i++) {
-
+  for (var i=0; i < obj.length; i++) {
 if(i>=r1i && i<r2i){
 
 var newRow = document.createElement("tr");
@@ -253,6 +259,8 @@ newRow.append(newCell6);
 document.getElementById("ttbody").appendChild(newRow);
 }
 }
+}
+
 document.getElementById("btloading").hidden=true;
           }else{
             var xmlhttp = new XMLHttpRequest();
