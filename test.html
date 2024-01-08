@@ -152,7 +152,7 @@ else if(x_ttd.split('/')[1] == '11'){ var mm_ttd = 'พ.ย.'}
 else if(x_ttd.split('/')[1] == '12'){ var mm_ttd = 'ธ.ค.'}
 
 var ttd = ''+(x_ttd.split('/')[0])+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
-
+alert(ttd)
         var cc_check = localStorage.getItem('all_data')
         if(cc_check !== null) {
           var obj = JSON.parse(cc_check);
