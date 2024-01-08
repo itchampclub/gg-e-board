@@ -155,10 +155,10 @@ var ttd = ''+(x_ttd.split('/')[0])+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
 
         var cc_check = localStorage.getItem('all_data')
         if(cc_check !== null) {
+          alert('ccok')
           var obj = JSON.parse(cc_check);
           if(obj[0].col1 !== ttd || obj[0].col1 === "-" || obj[0].col4 === ""){
-            alert(ttd+'$'+obj[0].col1)
-            localStorage.clear()
+            //localStorage.clear()
           }
 
   var utc7dt = new Date(new Date().toLocaleString('en', {timeZone: 'Asia/Bangkok'}))
@@ -273,7 +273,7 @@ document.getElementById("btloading").hidden=true;
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
           localStorage.setItem('all_data', JSON.stringify(obj));
-}
+}alert('setobj')
             }
             }
       } catch {}
