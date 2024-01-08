@@ -151,7 +151,7 @@ else if(x_ttd.split('/')[1] == '10'){ var mm_ttd = 'ต.ค.'}
 else if(x_ttd.split('/')[1] == '11'){ var mm_ttd = 'พ.ย.'}
 else if(x_ttd.split('/')[1] == '12'){ var mm_ttd = 'ธ.ค.'}
 
-var ttd = (x_ttd.split('/')[0])+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
+var ttd = ''+(x_ttd.split('/')[0])+'-'+mm_ttd+'-'+((x_ttd.split('/')[2]-2500))
 
         var cc_check = localStorage.getItem('all_data')
         if(cc_check !== null) {
